@@ -4,7 +4,7 @@ import { CreateEmployeeDto } from './dto/create-employee.dto';
 import { UpdateEmployeeDto } from './dto/update-employee.dto';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
-@Controller('employees')
+@Controller('employee')
 export class EmployeesController {
   constructor(private readonly employeesService: EmployeesService) {}
 
