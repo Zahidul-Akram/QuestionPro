@@ -1,0 +1,14 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 60
+      arrivalRate: 5000
+
+scenarios:
+  - flow:
+      - get:
+          url: '/employees/getAllEmployees/1'
+
+
+# artillery run load-test.yml
+# artillery run load-test.yml

@@ -12,7 +12,9 @@ describe('EmployeesService', () => {
     service = module.get<EmployeesService>(EmployeesService);
   });
 
-  it('should be defined', () => {
-    expect(service).toBeDefined();
-  });
+  it('should fetch hierarchy for valid ID', async () => {
+    const result = await service.getAllEmployees(1);
+    expect(result).toBeDefined();
+    expect(result.child).toHaveLength(2);
+});
 });
